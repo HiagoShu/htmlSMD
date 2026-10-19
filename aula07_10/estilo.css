@@ -1,0 +1,25 @@
+div{
+    border: 2px solid black;
+    width: 300px;
+    text-align: center;
+    position: relative;
+    top: 20px;
+    left:10px;
+    bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.div1{
+    background-color: lightskyblue;
+    font-weight: bold;
+}
+
+.div2{
+    background-color: lightgreen;
+    font-weight: bold;
+}
+
+.div3{
+    background-color: lightcoral;
+    font-weight: bold;
+}

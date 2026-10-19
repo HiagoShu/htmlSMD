@@ -1,0 +1,56 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background-color: greenyellow;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.introduction{
+    padding: 10px;
+    margin: 20px 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.introduction ::before{
+    content: 'Quote: ';
+    color: #555;
+    font-weight: bold;
+}
+
+.features{
+    list-style-type: none;
+    padding: 0;
+    max-width: 200px;
+}
+
+.features li{
+    margin: 10px 0;
+    background-color: #eee;
+    padding: 10px;
+    text-align: center;
+    transition: background-color 0.3s ease; 
+}
+
+.features li:hover{
+    background-color: #ccc;
+}
+
+.features li:first-child a{
+    color: red;
+}
+
+.features a{
+    text-decoration: none;
+    color: #333;
+    display:block;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus</title>
+    <style>
+        input{
+            padding: 10px;
+            border:2px solid gray;
+            border-radius: 5px;
+        }
+        input:focus{
+            background-color: yellow;
+            border-color:rgb(58, 150, 255);
+            outline: none;
+            box-shadow: 0 0 5px rgba(0,133,255,0.5);
+        }
+
+        a:link{
+            color:#FF0000;
+        }
+        a:visited{
+            color:#00FF00;
+        }
+        a:hover{
+            color:rgb(57, 30, 210);
+        }
+        a:active{
+            color:rgb(10, 17, 39);
+        }
+    </style>
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+       <h2>Cadastro de usuário</h2>
+       <label for="cadastro">Nome: </label>
+        <input type="text"  id="cadastro" placeholder="Digite seu nome">
+    </main>
+    <h2>Estados de um link</h2>
+    <a href="#">Link</a>
+    <p></p>
+    <footer>
+
+    </footer>
+</body>
+</html>

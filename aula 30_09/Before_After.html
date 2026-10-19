@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before e After</title>
+    <style>
+        q::before{
+            content:""";
+        }
+        q::after{
+            content:""";
+        }
+        li::before{
+            content: "★";
+            color:gold;
+        }
+        h2::before{
+            content:"★";
+            color:gold;
+        }
+        h2::after{
+            content:"★";
+            color:gold;
+        }
+        ::selection{
+            background-color: yellow;
+            color:black;
+        }
+        p::first-letter{
+            font-size:200%;
+            color:gray;
+        }
+        p::first-line{
+            color:blue;
+        }
+    </style>
+</head>
+<body>
+    <q>Testando</q>
+    <ul>
+        <li>
+            HTML
+        </li>
+        <li>
+            CSS
+        </li>
+        <li>
+            Javascript
+        </li>
+       
+    </ul>
+    <h2>Pseudo Elementos em CSS</h2>
+    <p>CSS permite estilizar partes específicas de um elemento sem precisar criar novas novas tags HTML. <br>
+    Com isso, é possível personalizar trechos do texto, diferenciando sua formatação.
+    </p>
+    <p>Selecione qualquer trecho deste texto com o mouse para observar o efeito definido pelo pseudo</p>
+</body>
+</html>

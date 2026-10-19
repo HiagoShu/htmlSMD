@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex</title>
+    <style>
+        .container{
+            display:flex;
+            background-color: white;
+            margin-bottom:20px;
+            padding:10px;
+            border: 1px solid black;
+        }
+
+        .quote{
+            background-color: yellow;
+            padding:10px;
+            margin:5px;
+            border: 1px solid #333;
+        }
+
+        .f-start{
+            justify-content: flex-start;
+        }
+
+        .f-end{
+            justify-content: flex-end;
+        }
+
+        .f-center{
+            justify-content: center;
+        }
+
+        .s-between{
+            justify-content: space-between;
+        }
+
+        .s-around{
+            justify-content: space-around;
+        }
+
+        .s-evenly{
+            justify-content: space-evenly;
+        }
+    </style>
+</head>
+<body>
+    
+    <p>1.Justify-content: Flex start</p>
+    <div class="container f-start">
+        <div class="quote"><p>Coisa 1</p></div>
+        <div class="quote"><p>Coisa 2</p></div>
+        <div class="quote"><p>Coisa 3</p></div>
+    </div>
+
+    <p>2.Justify-content: flex-end</p>
+    <div class="container f-end">
+        <div class="quote"><p>Coisa 1</p></div>
+        <div class="quote"><p>Coisa 2</p></div>
+        <div class="quote"><p>Coisa 3</p></div>
+    </div>
+    <p>3. Justify-content: center</p>
+    <div class=" container f-center"> 
+        <div class="quote"><p>Coisa 1</p></div>
+        <div class="quote"><p>Coisa 2</p></div>
+        <div class="quote"><p>Coisa 3</p></div>     
+    </div>
+
+    <p>4. Justify-content: space-between</p>
+    <div class="container s-between">
+        <div class="quote"><p>Coisa 1</p></div>
+        <div class="quote"><p>Coisa 2</p></div>
+        <div class="quote"><p>Coisa 3</p></div> 
+    </div>
+
+    <p>5. Justify-content: space-around</p>
+    <div class="container s-around"> 
+        <div class="quote"><p>Coisa 1</p></div>
+        <div class="quote"><p>Coisa 2</p></div>
+        <div class="quote"><p>Coisa 3</p></div>
+    </div>
+
+    <p>6. Justify-content: space-evenly</p>
+    <div class="container s-evenly">
+        <div class="quote"><p>Coisa 1</p></div>
+        <div class="quote"><p>Coisa 2</p></div>
+        <div class="quote"><p>Coisa 3</p></div>
+    </div>
+</body>
+</html>

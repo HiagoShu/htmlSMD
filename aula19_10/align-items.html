@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex</title>
+    <style>
+        .container{
+            height:120px;
+            display:flex;
+            flex-direction: row;
+            background-color: white;
+            margin-bottom:20px;
+            padding:10px;
+            border: 1px solid black;
+        }
+
+        .quote{
+            background-color: yellow;
+            padding:10px;
+            margin:5px;
+            border: 1px solid #333;
+        }
+
+        .f-start{
+            align-items: flex-start;
+        }
+
+        .f-end{
+            align-items: flex-end;
+        }
+        
+        .f-center{
+            align-items: center;
+        }
+        
+        .stretch{
+            align-items: stretch;
+        }
+        
+        .baseline{
+            align-items: baseline;
+        }
+           
+    </style>
+</head>
+<body>
+    
+    <p>1.Align-items: Flex start</p>
+    <div class="container f-start">
+        <div class="quote"><p>Coisa 1</p></div>
+        <div class="quote"><p>Coisa 2</p></div>
+        <div class="quote"><p>Coisa 3</p></div>
+    </div>
+
+    <p>2.Align-items: flex-end</p>
+    <div class="container f-end">
+        <div class="quote"><p>Coisa 1</p></div>
+        <div class="quote"><p>Coisa 2</p></div>
+        <div class="quote"><p>Coisa 3</p></div>
+    </div>
+    
+    <p>3. Align-items: center</p>
+    <div class=" container f-center"> 
+        <div class="quote"><p>Coisa 1</p></div>
+        <div class="quote"><p>Coisa 2</p></div>
+        <div class="quote"><p>Coisa 3</p></div>     
+    </div>
+
+    <p>4. Align-items: stretch</p>
+    <div class="container stretch">
+        <div class="quote"><p>Coisa 1</p></div>
+        <div class="quote"><p>Coisa 2</p></div>
+        <div class="quote"><p>Coisa 3</p></div> 
+    </div>
+
+    <p>5. Align-items: baseline</p>
+    <div class="container baseline"> 
+        <div class="quote"><p>Coisa 1</p></div>
+        <div class="quote"><p>Coisa 2</p></div>
+        <div class="quote"><p>Coisa 3</p></div>
+    </div>
+</body>
+</html>
