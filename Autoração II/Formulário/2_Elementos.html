@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Elementos do Form</title>
+</head>
+<body>
+    <h1> Estudando elementos do Form</h1>
+    <h2>1.Label</h2>
+    <ul>
+        <li>Define um rótulo para uma série de campos de um formulário</li>
+        <li>Muito útil para o trabalho de programas de leitura de tela</li>
+        <li>Facilita a interação dos usuários com o formulário, pois amplia a região de clique.</li>   
+    </ul>
+    <label name="Label" id="label" value="Isso é uma label">Isso é uma label</label> 
+
+    <h2>2. ELEMENTO button </h2>
+    <ul>
+        <li>Botão responsável por fazer ações como enviar dados e "resetar" valores do formulário</li>
+        <li>Possui o atributo type que aceita os valores: submit, reset e button.</li>
+    </ul>
+    <h2>3. Elemento select</h2>
+    <ul>
+        <li>Elemento que define uma lista drop-down</li>
+        <li>Por padrão, o primeiro item fica selecionado. Para definir qual opção será selecionada, utiliza-se o atributo <strong>selected</strong></li>
+    </ul>
+    <label for="cars">Escolha um carro</label>
+    <select name="cars" id="cars">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="fiat" selected>Fiat</option>
+        <option value="audi">Audi</option>
+    </select>
+    <h3>3.1 Elemento select - Atributo size</h3>
+    <p>Para especificar o número de valores visíveis, utilize o atributo <strong>size</strong></p>
+    <form action="/action_page.php">
+        <label for="cars">Choose a car:</label>
+        <select name="cars" id="cars" size="2">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="fiat">Fiat</option>
+        <option value="audi">Audi</option>
+        </select> <br> <br>
+        <input type="submit">
+    </form>
+    <h3>3.2 Elemento select - atributo multiple</h3>
+    <p>Permitindo múltiplas seleções</p>
+    <p>Você precisa segurar ctrl enquanto seleciona</p>
+    <form action="/action_page.php">
+        <label for="cars">Choose a car:</label>
+        <select name="cars" id="cars" size="4" multiple>
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="fiat">Fiat</option>
+        <option value="audi">Audi</option>
+        </select><br> <br>
+        <input type="submit">
+    </form>
+    
+    <h2>Elemento textarea</h2>
+    <ul>
+        <li>Campo para entrada de múltiplas linhas de texto</li>
+        <li>Atributos rows e cols, definem, respectivamente, a quantidade de linhas e colunas.</li>
+    </ul>
+    <p>Exemplo 1 - Usando rows e cols</p>
+    <textarea name="message" rows="10" cols="30"> the cat was playing in the garden</textarea>
+    <p>Exemplo 2 - Com CSS</p>
+    <textarea name="message" style="width:200px; height:600px;">The cat was playing in the garden</textarea>
+    <br>
+    <h2>Elementos fieldset e legend</h2>
+    <ul>
+        <li>O elemento fieldset é utilizado para agrupar dados relacionados em um formulário</li>
+        <li>O elemento legend define um título/rótulo para o elemento fieldset</li>
+    </ul>
+    <p>Exemplo:</p>
+    <form action="#">
+        <fieldset>
+            <legend>Dados Pessoais:</legend>
+            <label for="fname">Primeiro nome:</label><br>
+            <input type="text" id="fname" name="fname" value="José"><br>
+            <label for="lname">Sobrenome:</label><br>
+            <input type="text" id="lname" name="lname" value="Maria"><br><br>
+            <input type="submit" value="Submit">
+        </fieldset>
+    </form>
+</body>
+</html>

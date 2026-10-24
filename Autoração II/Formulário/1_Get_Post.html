@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário em HTML</title>
+</head>
+<body>
+    <h1>Todo formulário se inicia com a tag form</h1>
+    <form action="#" method="post">Isto é um formulário</form>
+    <!-- Atributo action: Define a localização de destino para os dados coletados-->
+     <!-- Atributo method: Define qual o método de envio de dados http (usualmente get ou post)-->
+
+    <h2>Usando método GET </h2>
+    <form action="http://www.foo.com" method="get">
+        <div>
+            <!--A tag label escreve o texto-->
+            <label for="say">What greeting do you want to say?</label>
+            <!-- A tag input cria o campo de input-->
+            <input name="say" id="say" value="Hi">
+        </div>
+        <div>
+            <label for="to"> Who do you want to say it to?</label>
+            <input name="to" id="to" value="Mom">
+        </div>
+
+        <div>
+            <button> Send my greetings</button>
+        </div>
+    </form>
+    <p>O método GET faz com que os dados apareçam na barra de endereço.Só some se fechar e abrir a página de novo.</p>
+
+    <h2>Usando método POST</h2>
+    <form action="http://www.foo.com" method="post">
+        <div>
+            <label for="say">What greeting do you want to say?</label>
+            <input name="say" id="say" value="Hi">
+        </div>
+
+        <div>
+            <label for="to">Who do you want to say it to?</label>
+            <input name="to" id="to" value="Mom">
+        </div>
+
+        <div>
+            <button>Send my greetings</button>
+        </div>
+    </form>
+</body>
+</html>
