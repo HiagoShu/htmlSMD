@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributos</title>
+</head>
+<body>
+    <h1>Estudando Atributos</h1>
+    <h2>Atributo multiple</h2>
+    <p>Permite ao usuário inserir múltiplos valores em um campo input</p>
+    <p>Nesse caso, selecionar múltiplos arquivos</p>
+    <form>
+        <label for="files">Select files:</label>
+        <input type="file" id="files" name="files" multiple> <br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <br><br>
+    <h2>Atributo maxlength</h2>
+    <p>Define o número máximo de caracteres de um campo input</p>
+    <p>Obs: este atributo delimita a entrada de dados, mas não oferece nenhum feedback</p>
+    <form>
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname" size="50"><br>
+        <label for="pin">PIN:</label><br>
+        <input type="text" id="pin" name="pin" maxlength="4" size="4">
+    </form>
+    <br><br>
+    <h2>Atributos max e min</h2>
+    <p>Define o número mínimo e máximo de valores de um campo input</p>
+    <p>Pode trabalhar com os tipos: number, range, date,datetime-local,month, time and week</p>
+    <form>
+        <label for="quantity">Quantity[between 1 and 5]:</label>
+
+        <input type="number" id="quantity" name="quantity" min="1" max="5"><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+    <br><br>
+    <h2>Atributo placeholder</h2>
+    <p>Indica ao usuário que tipo de informação é esperada para um campo input</p>
+    <p>Pode ser utilizado com os tipos: text, search, url, tel, email e password</p>
+
+    <form>
+        <label for="phone">Enter a phone number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="123-45-678"><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+    <br>
+    <h3>Critério para o uso do placeholder</h3>
+    <label for="f-name">First name</label><br>
+    <input type="text" id="f-name" name="f-name" placeholder="Enter your first name">
+    <br>
+    <p>A label e o placeholder possuem conteúdos similares, logo o emprego do placeholder é desnecessário</p>
+    <br>
+    <h3>Critério para o uso do placeholder</h3>
+    <label for="pwd">Password</label> <br>
+    <input type="password" id="pwd" name="pwd" placeholder="Must contain 8+ characters with at least amogus sus sus">
+    <br>
+    <p>A descrição do placeholder ficou comprometida em razão do tamanho da caixa de texto. Olhe o código</p>
+    <p>Por isso é recomendável, em muitas situações, colocar a dica acima do campo</p>
+    <br>
+    <h2>Atributo pattern</h3>
+        <p>Especifica um padrão regular para a entrada de dados <br>
+        A restrição é verificada quando o usuário tenta submeter o formulário <br> Pode ser utilizado com os tipos: text,date,search,url,tel,email e password</p>
+    
+        <form>
+            <label for="country_code">Country Code:</label>
+            <input type="text" id="country_code" name="country_code" pattern="[A-Za-z][3]" title="Three letter country code">
+            <input type="submit" id="country_code" value="Submit">
+        </form>
+    
+        <h3>Atributo pattern - Sintaxe básica</h3>
+        <p>"input type ="text" name="campo" pattern="regex" title="Mensagem de erro"</p>
+        <input type="text" name="campo" pattern="regex" title="Mensagem de erro">
+        <p>Onde: </p>
+        <ul>
+            <li><strong>Type: </strong>O tipo de campo de entrada(ex: text,email,tel)</li>
+            <li><strong>name:</strong>Nome do campo</li>
+            <li><strong>pattern:</strong> Expressão regular que define o formato esperado</li>
+            <li><strong>title:</strong>Mensagem de erro exibida se a entrada não corresponder ao  padrão</li>
+        </ul>
+        <br><br>
+        <h3>Atributo pattern - Exemplos de Uso</h3>
+        <h4>Validação de número de telefone</h4><br>
+        <p>Permitir apenas números no formato (XX) XXXX-XXXX ou (XX) XXXXX-XXXX</p><br>
+        <input type="tel" name="telefone" pattern="\(\d{2}\) \d{4,5}-\d{4}"title="Formato esperado: (XX) XXXX-XXXX ou (XX) XXXXX-XXXX">
+        <br>
+        <h4>Validação de Senhas:</h4>
+        <p>Senha com pelo menos uma letra maiúscula,uma minúscula,um número, e mínimo de 8 caracteres</p>
+        <input type="password" name="senha" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"title="A senha deve conter pelo menos 8 caracteres, incluindo uma letra maiúscula,uma minúscula e um número.">
+        <br>
+        <h4> Validação de CEP (Brasil):</h4>
+        <p>Permitir apenas números no formato XXXXX-XXX</p>
+        <input type="text" name="cep" pattern="\d{5}-\d{3}"     title="Formato esperado:XXXXX-XXX">
+        <br><br>
+        <h4>Validação de Email (simplificado)</h4>
+        <p>Verificar se o formato básico de um email está correto. </p>
+        <input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9-]+\.[a-z]{2,}$" title="Formato esperado: usuario@dominio.com">
+        <br><br>
+        <h2>Exemplos de uso do atributo pattern</h2>
+        <p>Exemplo 1</p>
+        <p>
+            <label>Enter your phone number in the format (123) - 456 - 7890
+            (<input name="tel1" type="tel" pattern="[0-9]{3}" placeholder="###" aria-label="3-digit area code" size="2"/>) -
+            <input name="tel2" type="tel" pattern="[0-9]{3}" placeholder="###" aria-label="3-digit prefix" size="2"/> -
+            <input name="tel3" type="tel" pattern="[0-9]{4}" placeholder="####" aria-label="4-digit number" size="3"/>
+            </label>
+        </p>
+        <br>
+        <p>Exemplo 2 </p>
+        <form>
+            <div>
+                <label for="uname">Choose a username: </label>
+                <input type="text" id="uname" name="name" required size="45" pattern="[a-z]{4,8}" title="4 to 8 lowercase letters">
+                <span class="validty"></span> <p>Usernames must be lowercase and 4-8 characters in length</p>
+            </div>
+            <div> <button> Submit</button></div>
+        </form>
+</body>
+</html>
