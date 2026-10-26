@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2</title>
+</head>
+<body>
+    <h1>Exercicio 2</h1>
+    <p>Crie um formulário com um campo para entrada de senhas que deve:
+        <ul>
+            <li>Ter pelo menos 10 caracteres.</li>
+            <li> Incluir pelo menos uma letra maiúscula, uma letra minúscula, um número e um caractere especial(ex: !,@,#,etc)</li>
+        </ul>
+    </p>
+
+    <form>
+        <label for="senha">Senha</label>
+        <input type="password" id="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=!]).{10,}" title="A senha deve ter pelo menos 10 caracteres, incluindo uma letra maiúscula,uma letra minúscula, um número e um caractere especial" required>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
